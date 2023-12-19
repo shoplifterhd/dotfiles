@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# start once/prevent duplicate processes
+run notification
+run dxhd
+run picom
+run polkit-gnome
+run clearfullscreen
+run plank
+run volnoti-dbus
+run polylaunch
+
+# run always
+udisksctl mount -b /dev/sdb1
+rm .xsession-errors*
+feh --randomize --no-fehbg --bg-scale ~/.local/wallpapers/*
+xset -dpms
+xset s off
+
+# weird exceptions
+sleep 2
+run clipit
+run nm-applet
+
+# fixes plank and notification
+bspc subscribe node_add | while read -r _; do
+   xdo raise -N Plank
+done 
+
+bspc subscribe node_add | while read -r _; do
+   xdo raise -N Notification
+done 
+
+
+
