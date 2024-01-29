@@ -1,9 +1,10 @@
-# hairlinehd's zsh config 11/8/2023
+# hairlinehd's zsh config
 
-# omz folder
+# oh my zsh folder
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# plugins
 plugins=(git command-not-found)
 source $ZSH/oh-my-zsh.sh
 
@@ -17,6 +18,7 @@ alias wget="wget --hsts-file="$XDG_DATA_HOME/wget-hsts""
 alias rm="trash-put"
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
 alias neofetch="neofetch | lolcat"
+
 
 autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit

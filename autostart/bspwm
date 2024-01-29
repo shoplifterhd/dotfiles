@@ -1,19 +1,25 @@
-#!/bin/sh
+#!/bin/zsh
+# hairlinehd's bspwm autostart file
 
-# start once/prevent duplicate processes
-run notification
-run dxhd
+# mount disks
+udisksctl mount -b /dev/sdb1
+udisksctl mount -b /dev/sdd1
+
+# start once to prevent duplicate processes
+run sxhkd
 run picom
 run polkit-gnome
 run clearfullscreen
+run swallow
 run plank
 run volnoti-dbus
 run polylaunch
+run notification
+
 
 # run always
-udisksctl mount -b /dev/sdb1
 rm .xsession-errors*
-feh --randomize --no-fehbg --bg-scale ~/.local/wallpapers/*
+setwallpaper --randomize ~/.local/wallpapers/.
 xset -dpms
 xset s off
 
@@ -31,5 +37,7 @@ bspc subscribe node_add | while read -r _; do
    xdo raise -N Notification
 done 
 
+# it works, either way i dont care
+complete -C "/usr/bin/ls /home/isao/.local/bin" shedit
 
 

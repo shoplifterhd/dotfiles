@@ -1,0 +1,9 @@
+#!/bin/sh
+pkg=$(checkupdates | wc -l)
+
+if [ "$pkg" = "0" ]; then
+  exit
+else
+  echo $pkg
+fi
+

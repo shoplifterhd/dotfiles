@@ -1,0 +1,5 @@
+#!/bin/sh
+# hairlinehd's i3 autostart file
+
+run polylaunch
+run dxhd 

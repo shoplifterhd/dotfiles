@@ -1,1 +1,2 @@
 #!/bin/sh
+bspc rule -a KeyOverlay state=floating layer=above 
