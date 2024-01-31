@@ -16,7 +16,6 @@ run volnoti-dbus
 run polylaunch
 run notification
 
-
 # run always
 rm .xsession-errors*
 setwallpaper --randomize ~/.local/wallpapers/.
