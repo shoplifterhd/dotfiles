@@ -31,4 +31,6 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages  
 export WINEPREFIX="$XDG_DATA_HOME"/wine  
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+
 QT_QPA_PLATFORMTHEME=gtk2

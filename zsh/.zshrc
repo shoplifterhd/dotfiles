@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # aliases
+alias restart="backuptool && /bin/restart"
 alias ls="lsd"
 alias updatedb="pkexec /usr/bin/updatedb"
 alias gc="git clone"

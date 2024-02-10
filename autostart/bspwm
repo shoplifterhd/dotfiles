@@ -2,8 +2,9 @@
 # hairlinehd's bspwm autostart file
 
 # mount disks
-udisksctl mount -b /dev/sdb1
 udisksctl mount -b /dev/sdd1
+udisksctl mount -b /dev/sdb1
+udisksctl mount -b /dev/sdc
 
 # start once to prevent duplicate processes
 run sxhkd
@@ -15,6 +16,7 @@ run plank
 run volnoti-dbus
 run polylaunch
 run notification
+run otd-daemon
 
 # run always
 rm .xsession-errors*
