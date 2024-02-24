@@ -7,20 +7,19 @@ udisksctl mount -b /dev/sdb1
 udisksctl mount -b /dev/sdc
 
 # start once to prevent duplicate processes
-run sxhkd
+run plank
 run picom
+run notification
 run polkit-gnome
 run clearfullscreen
 run swallow
-run plank
 run volnoti-dbus
 run polylaunch
-run notification
 run otd-daemon
 
 # run always
 rm .xsession-errors*
-setwallpaper --randomize ~/.local/wallpapers/.
+setwallpaper ~/.local/wallpapers/esteban-castle-MCJE6Zd0cLs-unsplash.jpg
 xset -dpms
 xset s off
 
@@ -37,8 +36,5 @@ done
 bspc subscribe node_add | while read -r _; do
    xdo raise -N Notification
 done 
-
-# it works, either way i dont care
-complete -C "/usr/bin/ls /home/isao/.local/bin" shedit
 
 

@@ -28,7 +28,7 @@ super + w
 
 # restart sxhkd
 super + Escape
-  pkill -usr1 -x sxhkd && notify-send 'sxhkd' 'sxhkd restarted'
+  pkill -usr1 -x sxhkd && notify-send -t 500 'sxhkd' 'sxhkd restarted'
 
 # dmenu
 super + p
@@ -37,6 +37,11 @@ super + p
 # music player
 super + m
   $AUDIO
+
+# video player
+super + v
+  $VIDEO
+
 
 # search
 super + d
@@ -105,12 +110,12 @@ super + shift + r
   bspc wm -r && notify-send "bspc" "wm restarted"
 
 # switch workspace
-super + {0-5}
-  bspc desktop -f {0-5}
+super + {0-6}
+  bspc desktop -f {0-6}
 
 # throw window into workspace
-super + shift + {0-5}
-  bspc node -d {0-5}
+super + shift + {0-6}
+  bspc node -d {0-6}
 
 ## switch window with direction
 super + shift + {h,j,k,l}

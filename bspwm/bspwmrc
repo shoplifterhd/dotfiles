@@ -5,8 +5,11 @@ xrandr --output DP-1 --mode 1920x1080 --rate 165 --rotate normal --primary
 #xrandr --output DVI-I-1 --mode 1600x900 --pos 1920x180 --rotate normal
 xrandr --output DVI-I-1 --off
 
+run sxhkd
+
 # workspaces
 bspc monitor DP-1 -d 1 2 3 4 5
+bspc monitor DVI-I-1 -d 6
 
 # autostart
 ~/.config/autostart/bspwm &
