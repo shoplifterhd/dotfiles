@@ -12,8 +12,6 @@ run picom
 run notification
 run polkit-gnome
 run clearfullscreen
-run swallow
-run volnoti-dbus
 run polylaunch
 run otd-daemon
 
@@ -27,6 +25,8 @@ xset s off
 sleep 2
 run clipit
 run nm-applet
+run volnoti-dbus
+run swallow
 
 # fixes plank and notification
 bspc subscribe node_add | while read -r _; do
