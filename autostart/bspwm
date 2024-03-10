@@ -17,7 +17,7 @@ run otd-daemon
 
 # run always
 rm .xsession-errors*
-setwallpaper ~/.local/wallpapers/esteban-castle-MCJE6Zd0cLs-unsplash.jpg
+setwallpaper --randomize ~/.local/wallpapers/
 xset -dpms
 xset s off
 
