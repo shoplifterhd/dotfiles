@@ -2,9 +2,9 @@
 # hairlinehd's bspwm autostart file
 
 # mount disks
-udisksctl mount -b /dev/sdd1
+udisksctl mount -b /dev/sdd
 udisksctl mount -b /dev/sdb1
-udisksctl mount -b /dev/sdc
+udisksctl mount -b /dev/sdc1
 
 # start once to prevent duplicate processes
 run plank
